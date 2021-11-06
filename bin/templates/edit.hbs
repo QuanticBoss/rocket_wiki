@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang='fr'>
+    <head>
+        <meta charset='utf-8' />
+        <title> Edit Page </title>
+    </head>
+
+    <body> 
+        <p>[ <a href="/">home</a> ]</p>
+        <h1>Editing {{title}}</h1>
+        {{!-- <form action="/save/{{title}}" method="POST"> --}}
+        <form action="/save" method="POST">
+            <textarea name="title" cols="30" rows="10" hidden="true">{{title}}</textarea>
+            <textarea name="body" cols="30" rows="10">{{body}}</textarea>
+            <input type="submit" value="Save">
+        </form>
+    </body>
+</html>
