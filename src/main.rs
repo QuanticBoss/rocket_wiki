@@ -108,6 +108,7 @@ fn edit_page(title: String) -> Template {
     Template::render("edit", page)
 }
 
+
 #[post("/save", data = "<page_form>")]
 fn save_page(page_form: Form<Page>) -> Redirect {
     let page: Page = page_form.into_inner();
